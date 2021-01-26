@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The M4 - BMW M4</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <link rel="icon" href="img/logo.png" sizes="16x16 24x24 32x32 48x48 64x64 128x128">
+    </head>
+    <body>
+
+        <div id="app" class="container">
+            <div class="slider-wrapper">
+
+                <!-- Prev -->
+                <div class="prev" @click="prevImg">
+                    <i class="fas fa-angle-left"></i>
+                </div>
+
+                <!-- Container images -->
+                <div class="images">
+                    <img :src="images[counter]" alt="">
+                </div>
+
+                <!-- Next -->
+                <div class="next" @click="nextImg">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+
+                <!-- Reference Nav -->
+                <div class="nav">
+                    <i class="fas fa-circle" v-for="image in images"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
