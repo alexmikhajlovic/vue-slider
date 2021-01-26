@@ -2,16 +2,40 @@
 
 body {
     background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
     color: white;
     text-align: center;
 }
-
+header{
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+}
+header img {
+    height: 80px;
+}
+/* Button */
+.my_btn {
+    padding: 10px;
+    background-color: #0066b0;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.my_btn:hover,
+.my_btn:active,
+.my_btn:focus {
+    cursor: pointer;
+    scale: 1.1;
+}
 /* ! Container & Slider */
 .container {
     display: flex;
     margin: 0 auto;
     width: 70%;
-    height: 100vh;
+    height: 80%;
 }
 .slider-wrapper {
     position: relative;
@@ -41,15 +65,15 @@ body {
     color: #565a5c;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
-    font-size: 40px;
+    transform: translate(-50% -50%);
+    font-size: 3.5rem;
     cursor: pointer;
     transition: all 0.5s;
 }
 .prev:hover, .next:hover,
 .prev:active, .next:active,
 .prev:focus, .next:focus {
-    color: #0066b1;
+    color: #0066b0;
 }
 .next {
     left: auto;
@@ -78,6 +102,6 @@ body {
     color: #565a5c;
 }
 .nav > i.active {
-    color: #0066b1;
+    color: #0066b0;
     scale: 2;
 }

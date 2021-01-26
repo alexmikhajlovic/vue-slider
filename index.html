@@ -13,6 +13,11 @@
     </head>
     <body>
 
+        <header>
+            <img src="img/logo.png" alt="BMW logo">
+            <div class="my_btn"><i class="far fa-comment-alt"></i> Richiedi un'offerta personalizzata </div>
+        </header>
+
         <div id="app" class="container">
             <div class="slider-wrapper">
 
@@ -33,7 +38,7 @@
 
                 <!-- Reference Nav -->
                 <div class="nav">
-                    <i class="fas fa-circle" v-for="image in images"></i>
+                    <i class="fas fa-circle" v-for="(image, index) in images" :class="(index == counter) ? 'active' : ''" @click="changeImg(index)"></i>
                 </div>
 
             </div>
